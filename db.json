@@ -1,0 +1,35 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Corretor Exemplo",
+      "email": "corretor@prime.com",
+      "senha": "123456",
+      "perfil": "corretor"
+    },
+    {
+      "id": 2,
+      "nome": "Cliente Exemplo",
+      "email": "cliente@prime.com",
+      "senha": "123456",
+      "perfil": "cliente"
+    }
+  ],
+  "imoveis": [
+    {
+      "id": 1,
+      "titulo": "Apartamento Central",
+      "descricao": "Ótimo apartamento no centro.",
+      "preco": 350000,
+      "corretorId": 1,
+      "destaque": true
+    }
+  ],
+  "interesses": [
+    {
+      "id": 1,
+      "imovelId": 1,
+      "clienteId": 2
+    }
+  ]
+}

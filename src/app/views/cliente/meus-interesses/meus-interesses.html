@@ -1,0 +1,18 @@
+<div class="meus-interesses">
+  <h2>Meus Imóveis de Interesse</h2>
+
+  <input
+    type="text"
+    placeholder="Buscar imóveis..."
+    [(ngModel)]="searchText"
+  />
+
+  <div class="cards-container">
+    <app-card-imovel
+      *ngFor="let imovel of interesses | filtroImovel:searchText"
+      [imovel]="imovel"
+    ></app-card-imovel>
+  </div>
+
+  <p *ngIf="interesses.length === 0">Você ainda não marcou nenhum imóvel como interesse.</p>
+</div>

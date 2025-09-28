@@ -1,0 +1,32 @@
+.busca-container {
+  padding: 1rem;
+  h1 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .imovel-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+    
+    h2 {
+      margin-top: 0;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}

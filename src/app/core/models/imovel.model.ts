@@ -1,0 +1,11 @@
+export interface Imovel {
+  id: number;
+  titulo: string;
+  tipo: string;
+  cidade: string;
+  preco: number;
+  descricao: string;
+  corretorId: number;
+  destaque: boolean;
+  imagemUrl: string;
+}

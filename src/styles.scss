@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importando uma fonte (opcional, mas recomendado para um bom design) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* Variáveis de Cor - Facilita a manutenção */
+:root {
+  --cor-primaria: #009B77;      // Verde-esmeralda
+  --cor-fundo: #f4f7f6;         // Um cinza bem claro para o fundo
+  --cor-texto: #333333;         // Cinza-escuro
+  --cor-branco: #ffffff;
+  --cor-container-claro: #e0f2f1; // Aquele azul/verde claro dos forms
+  --sombra-suave: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos Globais */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif; // Usando a fonte importada
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+/* Estilo padrão para botões */
+button {
+  cursor: pointer;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primario {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+}
+
+.btn-primario:hover {
+  filter: brightness(1.1);
+}/* You can add global styles to this file, and also import other style files */

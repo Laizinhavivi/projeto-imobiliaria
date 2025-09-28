@@ -1,0 +1,6 @@
+<div class="card-imovel">
+  <h3>{{ imovel.titulo }}</h3>
+  <p>{{ imovel.descricao }}</p>
+  <p>Preço: {{ imovel.preco | currency:'BRL' }}</p>
+  <ng-content></ng-content>
+</div>

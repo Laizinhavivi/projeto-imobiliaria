@@ -1,0 +1,58 @@
+// Centraliza o container na página
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 140px); // Ajuste a altura se seu navbar/footer for diferente
+  padding: 20px;
+}
+
+// O card azulado do formulário
+.form-container {
+  background-color: var(--cor-container-claro);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: var(--sombra-suave);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: var(--cor-primaria);
+  }
+}
+
+// Estilos para os campos do formulário
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+}
+
+// Link para registro
+.link-secundario {
+  display: block;
+  margin-top: 20px;
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-size: 14px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
