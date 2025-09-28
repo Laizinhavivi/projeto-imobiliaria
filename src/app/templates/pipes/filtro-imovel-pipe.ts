@@ -6,10 +6,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FiltroImovelPipe implements PipeTransform {
   transform(imoveis: any[], searchText: string): any[] {
-    if (!imoveis || !searchText) return imoveis;
-
-    return imoveis.filter(imovel =>
-      imovel.nome.toLowerCase().includes(searchText.toLowerCase())
+    if (!imoveis) return [];
+    if (!searchText) return imoveis;
+    searchText = searchText.toLowerCase();
+    return imoveis.filter(imovel => 
+      imovel.titulo.toLowerCase().includes(searchText) ||
+      imovel.descricao.toLowerCase().includes(searchText)
     );
   }
 }

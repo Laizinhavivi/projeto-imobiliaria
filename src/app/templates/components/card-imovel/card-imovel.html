@@ -1,6 +1,11 @@
-<div class="card-imovel">
+<div class="card">
   <h3>{{ imovel.titulo }}</h3>
-  <p>{{ imovel.descricao }}</p>
-  <p>Preço: {{ imovel.preco | currency:'BRL' }}</p>
-  <ng-content></ng-content>
+  <p class="descricao">
+    {{ imovel.descricao || "Descrição breve do imóvel..." }}
+  </p>
+  <p class="preco">R$ {{ imovel.preco | number:'1.0-0' }}</p>
+  
+  <div class="card-actions">
+    <ng-content></ng-content> <!-- O botão vem do template pai -->
+  </div>
 </div>

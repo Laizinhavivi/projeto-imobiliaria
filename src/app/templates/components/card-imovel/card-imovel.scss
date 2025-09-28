@@ -1,17 +1,56 @@
-.card-imovel {
-  border: 1px solid #ccc;
-  border-radius: 8px;
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 280px;
   padding: 1rem;
-  margin-bottom: 1rem;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-  h3 {
-    margin-top: 0;
-    color: #2c3e50;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
   }
 
-  p {
-    margin: 0.5rem 0;
+  h3 {
+    font-size: 1.2rem;
+    color: #009B77;
+    margin-bottom: 0.5rem;
+  }
+
+  .descricao {
+    flex: 1;
+    color: #333333;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .preco {
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 1rem;
+  }
+
+  .card-actions {
+    display: flex;
+    justify-content: center;
+
+    button {
+      padding: 0.5rem 1rem;
+      background-color: #009B77;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: darken(#009B77, 10%);
+      }
+    }
   }
 }

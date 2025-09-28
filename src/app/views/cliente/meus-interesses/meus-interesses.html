@@ -1,18 +1,16 @@
-<div class="meus-interesses">
-  <h2>Meus Imóveis de Interesse</h2>
-
-  <input
-    type="text"
-    placeholder="Buscar imóveis..."
-    [(ngModel)]="searchText"
-  />
+<div class="interesses-container">
+  <h1>Meus Interesses</h1>
 
   <div class="cards-container">
     <app-card-imovel
-      *ngFor="let imovel of interesses | filtroImovel:searchText"
-      [imovel]="imovel"
-    ></app-card-imovel>
+      *ngFor="let imovel of meusInteresses | filtroImovel:searchText"
+      [imovel]="imovel">
+      
+      <button (click)="removerInteresse(imovel.id)">Remover Interesse</button>
+    </app-card-imovel>
   </div>
 
-  <p *ngIf="interesses.length === 0">Você ainda não marcou nenhum imóvel como interesse.</p>
+  <p *ngIf="meusInteresses.length === 0">
+    Você ainda não marcou nenhum imóvel como interesse.
+  </p>
 </div>

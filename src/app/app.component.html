@@ -1,45 +1,14 @@
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">{{ title }}</div>
+    <ul class="menu">
+      <li *ngFor="let item of menu">
+        <a [routerLink]="item.link">{{ item.title }}</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
 <main class="main">
-  <div class="content">
-    <div class="left-side">
-      <svg class="angular-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 982 239" fill="none">
-        <!-- SVG simplificado, você pode colocar o seu completo aqui -->
-        <path d="M388.676 191.625h30.849L363.31 31.828h-35.758..." fill="url(#b)"/>
-      </svg>
-      <h1>{{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
-    </div>
-
-    <div class="divider" role="separator" aria-label="Divider"></div>
-
-    <div class="right-side">
-      <div class="pill-group">
-        <a class="pill" *ngFor="let item of menu" [routerLink]="item.link">
-          <span>{{ item.title }}</span>
-          <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 -960 960 960" width="14" fill="currentColor">
-            <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/>
-          </svg>
-        </a>
-      </div>
-
-      <div class="social-links">
-        <a href="https://github.com/angular/angular" target="_blank" rel="noopener" aria-label="Github">
-          <svg width="25" height="24" viewBox="0 0 25 24" fill="none">
-            <path d="M12.3047 0C5.50634 0 0 5.50942 0 12.3047C0 17.7423 3.52529 22.3535 8.41332 23.9787..."/>
-          </svg>
-        </a>
-        <a href="https://twitter.com/angular" target="_blank" rel="noopener" aria-label="Twitter">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-          </svg>
-        </a>
-        <a href="https://www.youtube.com/channel/UCbn1OgGei-DV7aSRo_HaAiw" target="_blank" rel="noopener" aria-label="Youtube">
-          <svg width="29" height="20" viewBox="0 0 29 20" fill="none">
-            <path d="M27.4896 1.52422C27.9301 1.96749 28.2463 2.51866 28.4068 3.12258C29.0004 5.35161 29.0004 10 29.0004 10..."/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </main>
-
-<router-outlet></router-outlet>

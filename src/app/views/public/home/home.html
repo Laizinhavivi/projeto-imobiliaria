@@ -1,11 +1,14 @@
-<div class="home">
-  <h2>Imóveis em Destaque</h2>
+<div class="home-container">
+  <h1>Imóveis em Destaque</h1>
 
   <div class="cards-container">
     <app-card-imovel
       *ngFor="let imovel of imoveisDestaque"
-      [imovel]="imovel"
-      ></app-card-imovel>
+      [imovel]="imovel">
+    </app-card-imovel>
   </div>
-  <p *ngIf="imoveisDestaque.length === 0">Nenhum imóvel em destaque no momento.</p>
+
+  <p *ngIf="imoveisDestaque.length === 0">
+    Nenhum imóvel em destaque no momento.
+  </p>
 </div>

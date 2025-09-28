@@ -1,9 +1,13 @@
-<input type="text" [(ngModel)]="searchText" placeholder="Buscar imóvel">
+<div class="search-bar">
+  <input type="text" [(ngModel)]="searchText" placeholder="Buscar imóveis...">
+</div>
 
-<div *ngFor="let imovel of imoveis | filtroImovel:searchText" class="card">
-  <app-card-imovel [imovel]="imovel"></app-card-imovel>
-  <button [routerLink]="['/editar-imovel', imovel.id]">Editar</button>
-  <button (click)="deleteImovel(imovel.id)">Excluir</button>
+<div class="cards-container">
+  <app-card-imovel
+    *ngFor="let imovel of imoveis | filtroImovel:searchText"
+    [imovel]="imovel"
+    (delete)="deleteImovel(imovel.id)">
+  </app-card-imovel>
 </div>
 
 <p *ngIf="imoveis.length === 0">Você ainda não cadastrou nenhum imóvel.</p>

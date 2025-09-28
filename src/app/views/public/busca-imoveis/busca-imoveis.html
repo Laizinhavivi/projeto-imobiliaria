@@ -1,10 +1,18 @@
 <div class="busca-container">
-  <h1>Busca de Imóveis</h1>
-
-  <div *ngFor="let imovel of imoveis" class="imovel-card">
-    <h2>{{ imovel.titulo }}</h2>
-    <p>Cidade: {{ imovel.cidade }}</p>
-    <p>Preço: R$ {{ imovel.preco | number:'1.0-0' }}</p>
-    <button>Ver Detalhes</button>
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar imóveis..." [(ngModel)]="searchText">
   </div>
+
+  <div class="cards-container">
+    <app-card-imovel
+      *ngFor="let imovel of imoveis | filtroImovel:searchText"
+      [imovel]="imovel">
+      
+      <button [routerLink]="['/imoveis', imovel.id]">Ver Detalhes</button>
+    </app-card-imovel>
+  </div>
+
+  <p *ngIf="(imoveis | filtroImovel:searchText).length === 0">
+    Nenhum imóvel encontrado.
+  </p>
 </div>

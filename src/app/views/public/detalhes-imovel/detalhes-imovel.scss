@@ -1,0 +1,13 @@
+.btn-detalhes {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #009B77;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.btn-detalhes:hover {
+  background-color: darken(#009B77, 10%);
+}
